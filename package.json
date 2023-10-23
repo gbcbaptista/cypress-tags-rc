@@ -1,6 +1,6 @@
 {
-  "name": "cypress-tags",
-  "version": "1.1.2",
+  "name": "raid-cypress-tags",
+  "version": "0.3.0",
   "description": "Use custom tags to slice up Cypress test runs.",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
     "mocha:run": "mocha -r ts-node/register --spec test/specs/*.ts --timeout 5000",
     "test": "npm run cy:run && npm run mocha:run"
   },
-  "author": "Anna Thomas",
+  "author": "Anna Thomas, Gabriel Baptista",
   "license": "ISC",
   "files": [
     "dist/**/*",
@@ -23,7 +23,7 @@
   "postversion": "git push && git push --tags",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infosum/cypress-tags.git"
+    "url": "git+https://github.com/gbcbaptista/raid-cypress-tags.git"
   },
   "dependencies": {
     "@cypress/browserify-preprocessor": "^3.0.1",
