@@ -32,8 +32,8 @@ const isSkip = isPropertyAccessExpression('skip');
 const extractTags = (config: Cypress.PluginConfigOptions) => {
   const includeEnvVar = config.env.CYPRESS_INCLUDE_TAGS ?? process.env.CYPRESS_INCLUDE_TAGS;
   const excludeEnvVar = config.env.CYPRESS_EXCLUDE_TAGS ?? process.env.CYPRESS_EXCLUDE_TAGS;
-  const includeTags = includeEnvVar ? includeEnvVar.split(',') : [];
-  const excludeTags = excludeEnvVar ? excludeEnvVar.split(',') : [];
+  const includeTags = includeEnvVar ? includeEnvVar.split('&') : [];
+  const excludeTags = excludeEnvVar ? excludeEnvVar.split('&') : [];
 
   return {
     includeTags,
